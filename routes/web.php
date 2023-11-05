@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Listing;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Models\Listings;
@@ -53,7 +54,9 @@ use App\Models\Listings;
 // });
 
 Route::get('/', function(){
-    return view('listings');
+    $listing = Listing::all();
+    // dd($listing);
+    return view('listings', ['listings' => $listing]);
 });
 // Route::get('/listings/{id}', function($id){
 //     return view('listings', [
