@@ -11,7 +11,7 @@
     <div class="flex gap-3">
         <!-- tags -->
         <div class="text-lg bg-laravel text-white px-3 rounded-full">
-            <i class="bi bi-code-slash"></i> {{$listing['tags']}}
+            <a href="/?tags={{$listing['tags']}}"><i class="bi bi-code-slash"></i> {{$listing['tags']}}</a>
         </div>
         <!-- company -->
         <div class="text-2xl text-light">
