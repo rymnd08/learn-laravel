@@ -1,9 +1,13 @@
 <?php
 
-use App\Models\Listing;
+use App\Http\Controllers\ListingController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
-use App\Models\Listings;
+
+
+
+Route::get('/', [ListingController::class, 'index']);
+Route::get('/listing/{listing}', [ListingController::class, 'show']);
 
 /*
 |--------------------------------------------------------------------------
@@ -53,16 +57,7 @@ use App\Models\Listings;
 //     return $request->kape . ' ' . $request->rymnd;
 // });
 
-Route::get('/', function(){
-    $listing = Listing::all();
-    // dd($listing);
-    return view('listings', ['listings' => $listing]);
-});
 
-Route::get('/listing/{listing}', function(Listing $listing){
-    // $listing = Listing::find($listing['id']);
-    return view('view-listing', ['listing' => $listing]);
-});
 // Route::get('/listings/{id}', function($id){
 //     return view('listings', [
 //         'listings' => Listings::all(),
