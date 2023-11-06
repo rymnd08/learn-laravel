@@ -8,7 +8,3 @@
         @endforeach
     </div>
 @endsection
-
-@section('modal')
-    <x-_add-modal />
-@endsection
