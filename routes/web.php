@@ -58,6 +58,11 @@ Route::get('/', function(){
     // dd($listing);
     return view('listings', ['listings' => $listing]);
 });
+
+Route::get('/listing/{listing}', function(Listing $listing){
+    // $listing = Listing::find($listing['id']);
+    return view('view-listing', ['listing' => $listing]);
+});
 // Route::get('/listings/{id}', function($id){
 //     return view('listings', [
 //         'listings' => Listings::all(),

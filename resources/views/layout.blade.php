@@ -25,5 +25,6 @@
     @yield('modal')
 
     @vite('resources/js/modal.js')
+
 </body>
 </html>

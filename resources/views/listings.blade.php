@@ -4,7 +4,7 @@
     <div class="grid grid-cols-1 gap-10 lg:grid-cols-2 ">
         <!-- CARD -->
         @foreach($listings as $listing)
-            <a href="/">
+            <a href="/listing/{{$listing['id']}}">
                 <div class="h-48 w-full border hover:shadow-sm hover:shadow-laravel m-auto sm:w-full bg-center  bg-slate-50 p-2 flex items-start gap-1 overflow-hidden ">
                     <div class="h-full min-w-[180px] hidden md:block">
                         <img src="https://logowik.com/content/uploads/images/113_laravel.jpg" class="w-full h-full" alt="">
@@ -36,7 +36,7 @@
         <div class="grid grid-cols-2 gap-3">
             <div class=" w-full">
             <label for="" class="block">Title</label>
-            <input type="text" name="" id="" value="kapeng mainit" class="w-full p-2 border focus:outline-none focus:border-blue-300 rounded">
+            <input type="text" name="" id="" value="kapeng mainit" class="w-full p-2 border focus:outline-none focus:border-blue-300 rounded" >
             </div>
             <div class="w-full">
             <label for="" class="block">Title</label>
