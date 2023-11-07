@@ -1,7 +1,7 @@
     <!-- Overlay -->
     <div class="h-screen w-full fixed top-0 left-0 bg-black bg-opacity-50 flex justify-center items-center  overlay hidden">
     <!-- MODAL -->
-    <div class="w-1/2 bg-white rounded overflow-auto max-h-[90vh] animate-slide-down">
+    <div class="w-full lg:w-3/4 xl:w-1/2 mx-4 lg:mx-0 bg-white rounded overflow-auto max-h-[90vh] animate-slide-down">
         <!-- modal-header -->
         <div class="p-3 border-b">
         <h1 class="text-2xl">Header</h1>
