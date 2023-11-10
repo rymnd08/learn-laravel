@@ -37,3 +37,5 @@
         </form>
     </div>
     </div>
+
+    <!-- @vite('resources/js/modal.js') -->

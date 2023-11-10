@@ -11,7 +11,7 @@
 <body>
 
     {{$slot}}
-    @vite('resources/js/modal.js')
+
     @vite('resources/js/openburger.js')
 </body>
 </html>
