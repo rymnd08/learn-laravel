@@ -9,7 +9,7 @@ use Illuminate\Validation\Rule;
 class ListingController extends Controller
 {
     public function index(){
-        $listings = Listing::latest()->filter(request(['tags', 'search']))->get();
+        $listings = Listing::latest()->filter(request(['tags', 'search']))->simplePaginate(6);
         // $listings = Listing::all()->filter(function($listing){
         //     return $listing['tags'] == request('tags');
         // });

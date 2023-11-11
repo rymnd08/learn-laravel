@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .form-input {
-    @apply w-full p-2 border focus:outline-none focus:border-laravel rounded ;
+    @apply w-full p-2 border focus:outline-none focus:border-laraDark rounded ;
 }

@@ -13,14 +13,16 @@
             <h1 class="text-xl  uppercase">{{$listing['title']}}</h1>
             <div>
                 @foreach($tags as $tag)
-                    <a href="?tags={{$listing['tags']}}"><p class="text-xs bg-laravel text-white inline px-2 rounded-full">{{$tag}}</p></a>
+                    <a href="?tags={{trim($tag)}}"><p class="text-xs bg-laravel text-white inline px-2 rounded-full">{{$tag}}</p></a>
                 @endforeach
                 <span class="font-bold">{{$listing['company']}}</span>
             </div>
             <p class=""><span class=""><i class="bi bi-geo-alt-fill text-laravel"></i></span> {{$listing['location']}}</p>
-            <p class="mt-2">{{$listing['description']}}</p>
+            <p class="mt-2 ">{{$listing['description']}}</p>
         </div>
-        <div class="absolute bottom-3">
-        <a href="/listing/{{$listing['id']}}" class="px-3 py-1 bg-laravel rounded-full bg-opacity-50 text-white">view</a>
+        <div class="absolute bottom-3 hover:scale-110">
+        <a href="/listing/{{$listing['id']}}" class="px-3 py-1 bg-laravel rounded-full bg-opacity-50 text-white ">view</a>
         </div>
     </div>
+
+

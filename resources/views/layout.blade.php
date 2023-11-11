@@ -10,6 +10,8 @@
         <!-- VIEW OUTPUT -->
         @yield('content')
     </div>
+
+
     
     <x-_add-modal />
 <script>
