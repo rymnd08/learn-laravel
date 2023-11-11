@@ -13,7 +13,7 @@ class ListingController extends Controller
         // $listings = Listing::all()->filter(function($listing){
         //     return $listing['tags'] == request('tags');
         // });
-        $_SESSION['search']= request('search');
+
         return view('listings', ['listings' => $listings]);
 
     }

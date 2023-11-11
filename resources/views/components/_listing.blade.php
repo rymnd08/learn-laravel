@@ -3,6 +3,7 @@
     @php
         $tags = explode(',', $listing['tags']);
     @endphp
+    
     <!-- card -->
     <div class="h-48 w-full border hover:shadow-sm hover:shadow-laravel m-auto sm:w-full bg-center  bg-slate-50 p-2 flex items-start gap-1 overflow-hidden relative">
         <div class="h-full min-w-[180px] hidden md:block">
