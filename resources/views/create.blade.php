@@ -50,7 +50,7 @@
             </div>
             <div class="mb-3">
                 <label for="description" class="text-xl font-semibold block mb-1">Description</label>
-                <textarea name="description" id="description"  rows="2" class="form-input"></textarea>
+                <textarea name="description" id="description"  rows="10" class="borderw-full focus:outline-laravel w-full p-2"></textarea>
                 @error('description')
                     <small class="text-red-500">{{$message}}</small>
                 @enderror
