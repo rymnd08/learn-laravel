@@ -1,5 +1,8 @@
 @props(['listing'])
 
+    @php
+        $tags = explode(',', $listing['tags']);
+    @endphp
     <!-- card -->
     <div class="h-48 w-full border hover:shadow-sm hover:shadow-laravel m-auto sm:w-full bg-center  bg-slate-50 p-2 flex items-start gap-1 overflow-hidden relative">
         <div class="h-full min-w-[180px] hidden md:block">
@@ -8,7 +11,9 @@
         <div class="grow text-justify">
             <h1 class="text-xl  uppercase">{{$listing['title']}}</h1>
             <div>
-                <a href="?tags={{$listing['tags']}}"><p class="text-xs bg-laravel text-white inline px-2 rounded-full">{{$listing['tags']}}</p></a>
+                @foreach($tags as $tag)
+                    <a href="?tags={{$listing['tags']}}"><p class="text-xs bg-laravel text-white inline px-2 rounded-full">{{$tag}}</p></a>
+                @endforeach
                 <span class="font-bold">{{$listing['company']}}</span>
             </div>
             <p class=""><span class=""><i class="bi bi-geo-alt-fill text-laravel"></i></span> {{$listing['location']}}</p>

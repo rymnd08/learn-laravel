@@ -13,11 +13,15 @@ class ListingController extends Controller
         // $listings = Listing::all()->filter(function($listing){
         //     return $listing['tags'] == request('tags');
         // });
+        $_SESSION['search']= request('search');
         return view('listings', ['listings' => $listings]);
+
     }
 
     public function store(Request $request){
+
         // dd($request->all());
+
         $formFields = $request
         ->validate([
             'title' => 'required', 
@@ -33,16 +37,12 @@ class ListingController extends Controller
         return redirect('/listings');
     }
 
-    public function create(Listing $listing){
+    public function create(){
         return view('create');
     }
 
     public function show(Listing $listing){
         return view('view-listing', ['listing' => $listing]);
     }
-
-
-
-
 
 }

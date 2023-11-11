@@ -2,13 +2,8 @@
 
 use App\Http\Controllers\ListingController;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Http\Request;
 
-
-
-Route::get('/', function(){
-    return redirect('/listings');
-});
+Route::redirect('/','/listings');
 
 Route::resources([
     'listings' => ListingController::class,
